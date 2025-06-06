@@ -1,0 +1,12 @@
+#{extends 'main.html' /}
+#{set title:'Formulário' /}
+
+<form action="@{Postagens.salvar}">
+Título: <input type="text" name="post.titulo"> </br>
+Conteúdo: <input type="text" name="post.conteudo"> </br>
+Autor: <input type="text" name="post.autor"> </br>
+Data: <input type="text" name="post.data"> </br>
+</hr>
+<button>Enviar</button>
+
+</form>

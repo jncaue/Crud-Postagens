@@ -1,0 +1,11 @@
+#{extends 'main.html' /}
+#{set title:'Listagem de pessoas' /}
+
+<ul>
+#{list items: listaPostagens, as:'post'}	
+	<li><b>${post.titulo}</b> - ${post.autor} - (${post.data}) - (<a href="@{Postagens.remover(post.id)}">Remover</a>) - (<a href="@{Postagens.detalhar(post)}">Detalhar</a>) </li> 
+	
+	</br> 
+#{/list}
+
+</ul>
