@@ -3,9 +3,16 @@
 
 <ul>
 #{list items: listaPostagens, as:'post'}	
-	<li><b>${post.titulo}</b> - ${post.autor} - (${post.data}) - (<a href="@{Postagens.remover(post.id)}">Remover</a>) - (<a href="@{Postagens.detalhar(post)}">Detalhar</a>) </li> 
-	
-	</br> 
+	<li>${post.titulo}
+		<ul>
+			<li>${post.conteudo}</li>
+			<li>${post.autor}</li>
+			<li>${post?.data.format('dd/MM/yyyy')}</li>
+		</ul>
+	</li>
+		
+</ul>
 #{/list}
 
-</ul>
+
+	 	

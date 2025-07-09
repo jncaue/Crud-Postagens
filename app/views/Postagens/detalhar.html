@@ -6,7 +6,7 @@
 		<ul>
 			<li>${post.conteudo}</li>
 			<li>${post.autor}</li>
-			<li>${post.data}</li>
+			<li>${post?.data.format('dd/MM/yyyy')}</li>
 		</ul>
 	</li>
 </ul>

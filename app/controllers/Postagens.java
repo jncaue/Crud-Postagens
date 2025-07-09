@@ -29,8 +29,11 @@ public class Postagens extends Controller{
 	}
 	
 	public static void detalhar(Postagem post) {
-//	    Postagem post = Postagem.findById(id);
 	    render(post);
 	}
 	
+	public static void editar(Long id) {
+		Postagem p = Postagem.findById(id);
+		renderTemplate("Postagens/form.html", p);
+	}
 }
